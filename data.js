@@ -152,8 +152,8 @@ const IDOLS = [
   {
     "id": "26",
     "group": "GOT7",
-    "name": "Junyoung",
-    "image": "images/Junyoung_GOT7.jpg"
+    "name": "Jinyoung",
+    "image": "images/Jinyoung_GOT7.jpg"
   },
   {
     "id": "27",

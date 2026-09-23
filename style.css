@@ -42,4 +42,3 @@
 .choices-v2 .love:hover{background:linear-gradient(180deg,#ff7398,#ff3d70);border-color:#ffb0c4;transform:translateY(-1px)}
 .choices-v2 .love:active{transform:scale(.98)}
 @media(max-width:700px){.choices-v2{column-gap:8px;row-gap:9px;margin-top:10px}.choices-v2 .like-slot{gap:6px}.choices-v2 .like-slot button{min-height:48px;padding:12px 8px;font-size:11px}.choices-v2 .love{min-height:52px;font-size:11px}.choices-v2 .secondary-actions{grid-template-columns:minmax(0,1fr);width:min(100%,520px)}.choices-v2 .secondary-actions button{min-height:50px}}
-.card .loveBadge{position:absolute;right:8px;top:8px;background:linear-gradient(180deg,#ff5c8a,#ef2c63);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;padding:4px 7px;border-radius:999px;box-shadow:0 4px 10px -4px rgba(239,44,99,.6)}

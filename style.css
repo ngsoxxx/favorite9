@@ -38,3 +38,39 @@
 
 /* Photo-aligned rounded pill buttons */
 .choices-v2{max-width:900px;margin:14px auto 0;display:grid;grid-template-columns:1fr 1fr;column-gap:15px;row-gap:12px;align-items:start}.choices-v2 .like-slot{display:flex;justify-content:center}.choices-v2 .like-slot button,.choices-v2 .secondary-actions button{width:100%;min-height:54px;padding:13px 24px;border:1px solid #3a3a42;border-radius:999px;background:#111114;color:#f2f2f4;font-size:12px;font-weight:600;letter-spacing:.14em;cursor:pointer;transition:background .18s ease,border-color .18s ease,transform .12s ease}.choices-v2 button:hover{background:#1b1b20;border-color:#777780}.choices-v2 button:active{transform:scale(.98)}.choices-v2 .secondary-actions{grid-column:1 / -1;display:grid;grid-template-columns:minmax(220px,520px);justify-content:center;gap:10px}.choices-v2 .secondary-actions button{min-height:52px}.choices-v2 .secondary-actions #skip{color:#9999a1}@media(max-width:700px){.choices-v2{column-gap:8px;row-gap:9px;margin-top:10px}.choices-v2 .like-slot button{min-height:52px;padding:13px 8px;font-size:11px}.choices-v2 .secondary-actions{grid-template-columns:minmax(0,1fr);width:min(100%,520px)}.choices-v2 .secondary-actions button{min-height:50px}}
+
+/* LOVE is the stronger preference tier above LIKE */
+.choices-v2 .like-slot{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.choices-v2 .like-slot button{
+  width:100%;
+  min-height:54px;
+}
+.choices-v2 .like-slot .love-btn{
+  background:#17171c;
+  border-color:#555560;
+  letter-spacing:.13em;
+}
+.choices-v2 .like-slot .love-btn .double-heart{
+  display:inline-block;
+  margin-right:5px;
+  font-size:15px;
+  letter-spacing:-5px;
+  transform:translateY(1px);
+}
+.choices-v2 .like-slot .love-btn:hover{
+  background:#222229;
+  border-color:#888892;
+}
+@media(max-width:700px){
+  .choices-v2 .like-slot{gap:7px}
+  .choices-v2 .like-slot .love-btn{
+    min-height:50px;
+    font-size:10px;
+  }
+  .choices-v2 .like-slot .love-btn .double-heart{font-size:14px}
+}

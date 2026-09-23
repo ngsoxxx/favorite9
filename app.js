@@ -1,4 +1,4 @@
-const $=s=>document.querySelector(s);let mode,state,current;
+const LOVE_WEIGHT = 1.6;\nconst $=s=>document.querySelector(s);let mode,state,current;
 const show=id=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');scrollTo(0,0)};
 const shuffle=a=>[...a].sort(()=>Math.random()-.5);
 function start(m){mode=m;state={idols:IDOLS.map(x=>({...x,score:1500,games:0})),history:[],n:0,target:m==='quick'?100:150};show('#sort');next()}

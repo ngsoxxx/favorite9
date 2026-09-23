@@ -1,7 +1,7 @@
 const $=s=>document.querySelector(s);let mode,state,current;
 const show=id=>{document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');scrollTo(0,0)};
 const shuffle=a=>[...a].sort(()=>Math.random()-.5);
-function start(m){mode=m;state={idols:IDOLS.map(x=>({...x,score:1500,games:0})),history:[],n:0,target:m==='quick'?Math.max(30,Math.round(IDOLS.length*.7)):Math.max(70,Math.round(IDOLS.length*1.7))};show('#sort');next()}
+function start(m){mode=m;state={idols:IDOLS.map(x=>({...x,score:1500,games:0})),history:[],n:0,target:m==='quick'?100:150};show('#sort');next()}
 function key(a,b){return[a.id,b.id].sort().join('|')}
 function elo(a,b,out){const k=mode==='quick'?28:20,e=1/(1+10**((b.score-a.score)/400));a.score+=k*(out-e);b.score+=k*((1-out)-(1-e));a.games++;b.games++}
 function pick(){let recent=new Set(state.history.slice(-18).map(h=>key(h.a,h.b))),c=[];for(let i=0;i<state.idols.length;i++)for(let j=i+1;j<state.idols.length;j++){let a=state.idols[i],b=state.idols[j];if(recent.has(key(a,b)))continue;c.push({a,b,d:Math.abs(a.score-b.score)+Math.random()*120})}c.sort((x,y)=>x.d-y.d);return c[0]||(()=>{let s=shuffle(state.idols);return{a:s[0],b:s[1]}})()}
